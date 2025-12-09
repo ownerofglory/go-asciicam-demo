@@ -29,7 +29,7 @@ go build -o asciicam
   -camWidth=320 \
   -camHeight=180 \
   -gst-pipeline 'avfvideosrc device-index=0 ! videoconvert ! videoscale ! video/x-raw,format=RGB,width=320,height=180,framerate=30/1 ! queue max-size-buffers=1 max-size-time=0 max-size-bytes=0 ! fdsink fd=1 sync=false' \
-  -fps
+  -fps -ansi
 ```
 
 **Example result**
